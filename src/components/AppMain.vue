@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         getProjects(){
-            axios.get('/user?ID=12345')
+            axios.get('http://127.0.0.1:8000/api/projects')
                 .then(function (response) {
                     // handle success
                     console.log(response);
@@ -20,7 +20,10 @@ export default {
                     console.log(error);
                 })
             }
-        }
+    },
+    created(){
+        this.getProjects();
+    }
 }
 
 </script>
@@ -29,7 +32,7 @@ export default {
 
     <main>
         <div class="container">
-
+            <h1>Ciao, Funziono</h1>
         </div>
     </main>
 
